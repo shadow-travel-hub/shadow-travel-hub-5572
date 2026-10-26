@@ -84,4 +84,303 @@ nav a:hover{opacity:1;text-decoration:underline}
 
 /* why */
 .why{background:var(--forest);color:#fff}
-.wh
+.why .lead{color:#cfe0d6}
+.ticks{list-style:none;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.ticks li{padding-left:30px;position:relative}
+.ticks li::before{content:"";position:absolute;left:0;top:7px;width:16px;height:10px;border-left:3px solid var(--amber);border-bottom:3px solid var(--amber);transform:rotate(-45deg)}
+
+/* reviews */
+.summary{display:flex;align-items:center;gap:18px;margin-bottom:26px;flex-wrap:wrap}
+.score{font-family:'Bricolage Grotesque',sans-serif;font-size:3.2rem;font-weight:800;line-height:1}
+.stars{color:var(--amber);font-size:1.4rem;letter-spacing:2px}
+.stars .off{color:#d4d9d5}
+.count{color:var(--muted);font-size:.95rem}
+.reviews{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-bottom:34px}
+.review{border:1px solid var(--line);border-radius:16px;padding:18px}
+.review .who{font-weight:700;margin-top:8px}
+.review p{color:var(--muted)}
+.empty{color:var(--muted);padding:18px;border:1px dashed var(--line);border-radius:16px;grid-column:1/-1}
+.form{background:var(--mist);border-radius:18px;padding:22px;max-width:520px}
+.form h3{margin-bottom:12px}
+.form label{display:block;font-weight:700;font-size:.9rem;margin:12px 0 4px}
+.form input[type=text],.form textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff}
+.pick{display:flex;flex-direction:row-reverse;justify-content:flex-end;gap:4px}
+.pick input{position:absolute;opacity:0}
+.pick label{font-size:2rem;line-height:1;color:#c9d0cb;cursor:pointer;margin:0}
+.pick input:checked~label,.pick label:hover,.pick label:hover~label{color:var(--amber)}
+.pick input:focus-visible+label{outline:3px solid var(--amber);border-radius:6px}
+.form .btn{margin-top:16px}
+#msg{margin-top:10px;font-weight:700;color:var(--leaf)}
+
+/* contact */
+footer{background:#0b1612;color:#e8efe9;padding:56px 0 90px}
+.cols{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+footer h3{color:var(--amber);margin-bottom:12px;font-size:1.1rem}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{text-decoration:underline}
+.copy{margin-top:36px;color:#8da094;font-size:.85rem}
+
+/* floating buttons */
+.float{position:fixed;right:14px;bottom:14px;display:flex;flex-direction:column;gap:10px;z-index:30}
+.float a{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;font-size:.8rem;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.float .c{background:var(--amber);color:var(--ink)}
+.float .w{background:#25a244}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top">Shadow Travel Hub <span>5572</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#cars">Cars</a>
+      <a href="#reviews">Reviews</a>
+      <a class="keep" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <h1>Shadow Travel Hub 5572</h1>
+    <div class="route"><span>Ooty</span><i></i><span>Coimbatore</span></div>
+    <p>Safe, on-time cab service with trusted drivers and clear pricing. Our main route is Ooty to Coimbatore, and we also travel to many other places.</p>
+    <div class="cta">
+      <a class="btn btn-call" href="tel:+919003296620">Call 9003296620</a>
+      <a class="btn btn-wa" href="https://wa.me/918904224229?text=Hi%20Shadow%20Travel%20Hub%205572%2C%20I%20want%20to%20book%20a%20cab." target="_blank" rel="noopener">WhatsApp 8904224229</a>
+      <a class="btn btn-ghost" href="#reviews">See ratings</a>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <h2>Travel made simple, from Ooty to Coimbatore</h2>
+      <p class="lead" style="margin-bottom:0">Shadow Travel Hub 5572 provides safe, reliable and comfortable travel across Ooty and major South Indian destinations. We offer pickup and drop services, airport transfers, sightseeing tours and customised travel packages. Our focus is quality service and customer satisfaction on every trip.</p>
+    </div>
+    <div class="facts">
+      <div><b>Main route</b><span>Ooty ⇄ Coimbatore</span></div>
+      <div><b>Also available</b><span>Many other places on request</span></div>
+      <div><b>Book by</b><span>Phone 9003296620 or WhatsApp 8904224229</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services">
+  <div class="wrap">
+    <h2>Our services</h2>
+    <p class="lead">Tell us where you want to go and we will plan the ride.</p>
+    <div class="grid">
+      <div class="card main"><h3>Ooty to Coimbatore</h3><p>Our main route. Pickup from your address and drop at your destination, either way.</p></div>
+      <div class="card"><h3>Address pickup</h3><p>We come to your door, hotel or resort at the time you choose.</p></div>
+      <div class="card"><h3>Airport transfer</h3><p>On-time pickup and drop for Coimbatore airport and other airports.</p></div>
+      <div class="card"><h3>Sightseeing</h3><p>Coonoor, Avalanche, Kodanadu, Ooty local and Mudumalai trips.</p></div>
+      <div class="card"><h3>Outstation and packages</h3><p>Customised trips to other places across South India.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CARS -->
+<section id="cars">
+  <div class="wrap">
+    <h2>Our cars</h2>
+    <p class="lead">Clean, well-maintained vehicles for families, groups and solo travellers.</p>
+    <div class="cars">
+      <figure><img src="car1.jpg" alt="Shadow Travel Hub car 1" loading="lazy" onerror="this.style.display='none'"><figcaption>Car 1</figcaption></figure>
+      <figure><img src="car2.jpg" alt="Shadow Travel Hub car 2" loading="lazy" onerror="this.style.display='none'"><figcaption>Car 2</figcaption></figure>
+      <figure><img src="car3.jpg" alt="Shadow Travel Hub car 3" loading="lazy" onerror="this.style.display='none'"><figcaption>Car 3</figcaption></figure>
+      <figure><img src="car4.jpg" alt="Shadow Travel Hub car 4" loading="lazy" onerror="this.style.display='none'"><figcaption>Car 4</figcaption></figure>
+      <figure><img src="car5.jpg" alt="Shadow Travel Hub car 5" loading="lazy" onerror="this.style.display='none'"><figcaption>Car 5</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="wrap">
+    <h2>Why choose us</h2>
+    <p class="lead">Memorable journeys start here.</p>
+    <ul class="ticks">
+      <li>Friendly customer support</li>
+      <li>On-time pickup and drop</li>
+      <li>Professional, trusted drivers</li>
+      <li>Transparent pricing</li>
+      <li>Well-maintained vehicles</li>
+      <li>Stress-free trips</li>
+    </ul>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="wrap">
+    <h2>Customer ratings</h2>
+    <p class="lead">What travellers say about Shadow Travel Hub 5572.</p>
+
+    <div class="summary">
+      <div class="score" id="avg">0.0</div>
+      <div>
+        <div class="stars" id="avgStars" aria-hidden="true">☆☆☆☆☆</div>
+        <div class="count" id="count">No ratings yet</div>
+      </div>
+    </div>
+
+    <div class="reviews" id="list"></div>
+
+    <form class="form" id="reviewForm">
+      <h3>Rate your trip</h3>
+      <label for="name">Your name</label>
+      <input type="text" id="name" maxlength="40" required>
+      <label>Your rating</label>
+      <div class="pick" role="radiogroup" aria-label="Star rating">
+        <input type="radio" name="rate" id="s5" value="5"><label for="s5" title="5 stars">★</label>
+        <input type="radio" name="rate" id="s4" value="4"><label for="s4" title="4 stars">★</label>
+        <input type="radio" name="rate" id="s3" value="3"><label for="s3" title="3 stars">★</label>
+        <input type="radio" name="rate" id="s2" value="2"><label for="s2" title="2 stars">★</label>
+        <input type="radio" name="rate" id="s1" value="1"><label for="s1" title="1 star">★</label>
+      </div>
+      <label for="text">Your review</label>
+      <textarea id="text" rows="4" maxlength="400" required></textarea>
+      <button class="btn btn-call" type="submit">Post review</button>
+      <div id="msg" role="status"></div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- CONTACT / FOOTER -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#cars">Cars</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Types of service</h3>
+        <ul>
+          <li>Ooty to Coimbatore</li>
+          <li>Coonoor sightseeing</li>
+          <li>Avalanche sightseeing</li>
+          <li>Kodanadu sightseeing</li>
+          <li>Ooty local sightseeing</li>
+          <li>Mudumalai sightseeing</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact details</h3>
+        <ul>
+          <li>Phone: <a href="tel:+919003296620">9003296620</a></li>
+          <li>WhatsApp: <a href="https://wa.me/918904224229" target="_blank" rel="noopener">8904224229</a></li>
+          <li>Instagram: <a href="https://www.instagram.com/Shadow_travel_hub_5572" target="_blank" rel="noopener">@Shadow_travel_hub_5572</a></li>
+          <li>Main route: Ooty to Coimbatore</li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">© 2026 Shadow Travel Hub 5572. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="float">
+  <a class="w" href="https://wa.me/918904224229" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WA</a>
+  <a class="c" href="tel:+919003296620" aria-label="Call now">Call</a>
+</div>
+
+<script>
+/* ------------------------------------------------------------
+   REVIEWS STAY ON THIS PAGE (nothing is sent to WhatsApp).
+   To show a real customer review to EVERY visitor, add it to the
+   list below, then commit the file again.
+   Format: { name: "Customer name", rating: 5, text: "Their review" }
+------------------------------------------------------------- */
+var SITE_REVIEWS = [
+  // { name: "Example Name", rating: 5, text: "Write the real review here." },
+];
+
+var KEY = "sth5572_reviews";
+var visitor = [];
+try { visitor = JSON.parse(localStorage.getItem(KEY)) || []; } catch (e) { visitor = []; }
+
+function starsHTML(n){
+  var s = "";
+  for (var i = 1; i <= 5; i++) s += i <= Math.round(n) ? "★" : '<span class="off">★</span>';
+  return s;
+}
+
+function render(){
+  var all = SITE_REVIEWS.concat(visitor);
+  var list = document.getElementById("list");
+  list.innerHTML = "";
+
+  if (!all.length){
+    var e = document.createElement("div");
+    e.className = "empty";
+    e.textContent = "No reviews yet. Be the first to rate your trip.";
+    list.appendChild(e);
+    document.getElementById("avg").textContent = "0.0";
+    document.getElementById("avgStars").innerHTML = starsHTML(0);
+    document.getElementById("count").textContent = "No ratings yet";
+    return;
+  }
+
+  var total = 0;
+  all.slice().reverse().forEach(function(r){
+    total += Number(r.rating);
+    var d = document.createElement("div");
+    d.className = "review";
+    var st = document.createElement("div");
+    st.className = "stars";
+    st.innerHTML = starsHTML(r.rating);
+    var p = document.createElement("p");
+    p.textContent = r.text;
+    var w = document.createElement("div");
+    w.className = "who";
+    w.textContent = r.name;
+    d.appendChild(st); d.appendChild(p); d.appendChild(w);
+    list.appendChild(d);
+  });
+
+  var avg = total / all.length;
+  document.getElementById("avg").textContent = avg.toFixed(1);
+  document.getElementById("avgStars").innerHTML = starsHTML(avg);
+  document.getElementById("count").textContent = "Based on " + all.length + (all.length === 1 ? " rating" : " ratings");
+}
+
+document.getElementById("reviewForm").addEventListener("submit", function(ev){
+  ev.preventDefault();
+  var picked = document.querySelector('input[name="rate"]:checked');
+  var msg = document.getElementById("msg");
+  if (!picked){ msg.style.color = "#b3261e"; msg.textContent = "Please choose a star rating."; return; }
+  visitor.push({
+    name: document.getElementById("name").value.trim(),
+    rating: Number(picked.value),
+    text: document.getElementById("text").value.trim()
+  });
+  try { localStorage.setItem(KEY, JSON.stringify(visitor)); } catch (e) {}
+  this.reset();
+  msg.style.color = "";
+  msg.textContent = "Thank you! Your review is now on this page.";
+  render();
+});
+
+render();
+</script>
+</body>
+</html>
